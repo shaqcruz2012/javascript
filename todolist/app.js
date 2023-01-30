@@ -29,14 +29,11 @@ const tasklist = document.querySelector(".task-list")
 // handle the form submit event
 form.addEventListener("submit", function(e) {
   e.preventDefault()
-
   // get task input value
   const taskInput = document.querySelector("#task-input")
   const task = taskInput.value 
-
   // add the task to the todos array
   todos.push({task, completed: false})
-
   //save the todos array to local storage
   localStorage.setItem("todos", JSON.stringify(todos))
   //clear the task input value
